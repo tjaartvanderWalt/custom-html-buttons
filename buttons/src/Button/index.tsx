@@ -23,6 +23,7 @@ const Button: React.FC<IButtonProps> = ({
   const isBlock = type === "block";
   const isPill = type === "pill";
 
+  const isDefault = color === "default";
   const isPrimary = color === "primary";
   const isSecondary = color === "secondary";
   const isSuccess = color === "success";
@@ -56,12 +57,13 @@ const Button: React.FC<IButtonProps> = ({
     },
     // outline colors
     {
+      [`${btnPrefix}-btn--outline`]: isDefault && isOutline,
       [`${btnPrefix}-btn-primary--outline`]: isPrimary && isOutline,
       [`${btnPrefix}-btn-secondary--outline`]: isSecondary && isOutline,
       [`${btnPrefix}-btn-success--outline`]: isSuccess && isOutline,
       [`${btnPrefix}-btn-danger--outline`]: isDanger && isOutline,
     },
-    // bootstrap sizes
+    // sizes
     {
       [`${btnPrefix}-btn--small`]: isSizeSmall,
       [`${btnPrefix}-btn--large`]: isSizeLarge,

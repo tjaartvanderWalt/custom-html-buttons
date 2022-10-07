@@ -1,0 +1,755 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e8e8e8;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+
+  > * {
+    margin-right: 5px;
+  }
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+$color-default: #f8f9fa;
+$color-default--dark: #f9fafb;
+
+$color-primary: #0d6efd;
+$color-primary--dark: #0b5ed7;
+$color-primary--darker: #0a58ca;
+$color-primary--darker-border: #0a53be;
+
+$color-secondary: #6c757d;
+$color-secondary--dark: #5c636a;
+$color-secondary--darker: #565e64;
+$color-secondary--darker-border: #51585e;
+
+$color-success: #198754;
+$color-success--dark: #157347;
+$color-success--darker: #146c43;
+$color-success--darker-border: #13653f;
+
+$color-danger: #dc3545;
+$color-danger--dark: #bb2d3b;
+$color-danger--darker: #b02a37;
+$color-danger--darker-border: #a52834;
+
+/* Bootstrap style buttons begin */
+
+.bs-btn {
+  padding: 6px 12px;
+  background: $color-default;
+  border: 1px solid $color-default;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  outline: none;
+
+  &:hover {
+    background: $color-default--dark;
+    border: 1px solid $color-default;
+  }
+
+  &:focus {
+    background: $color-default--dark;
+    border: 1px $color-default--dark;
+    box-shadow: 0px 0px 0px 4px rgba(211, 212, 213, 0.8);
+  }
+
+  &:active {
+    background: $color-default--dark;
+    border: 1px solid $color-default--dark;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-default;
+    color: $color-default;
+
+    &:hover {
+      color: #000000;
+    }
+
+    :focus {
+      background: transparent;
+      border: 1px solid $color-default--dark;
+      box-shadow: 0px 0px 0px 4px rgba(211, 212, 213, 0.8);
+    }
+  }
+
+  &--small {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &--large {
+    padding: 8px 16px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.bs-btn-primary {
+  background: $color-primary;
+  border: 1px solid $color-primary;
+  color: #ffffff;
+
+  &:hover {
+    background: $color-primary--dark;
+    border: 1px solid $color-primary--dark;
+  }
+
+  &:focus {
+    background: $color-primary--dark;
+    border: 1px solid $color-primary--darker;
+    box-shadow: 0px 0px 0px 4px rgba(49, 132, 253, 0.8);
+  }
+
+  &:active {
+    background: $color-primary--darker;
+    /* primary-blue-active-border */
+    border: 1px solid $color-primary--darker-border;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-primary;
+      border: 1px solid $color-primary;
+      color: #ffffff;
+    }
+
+    &:focus {
+      background: transparent;
+      border: 1px solid $color-primary--darker;
+      box-shadow: 0px 0px 0px 4px rgba(49, 132, 253, 0.8);
+      color: $color-primary;
+    }
+
+    &:active {
+      background: $color-primary--darker;
+      border: 1px solid $color-primary--darker-border;
+      color: #ffffff;
+    }
+  }
+}
+
+.bs-btn-secondary {
+  background: $color-secondary;
+  border: 1px solid $color-secondary;
+  color: #ffffff;
+
+  &:hover {
+    background: $color-secondary--dark;
+    border: 1px solid $color-secondary--dark;
+  }
+
+  &:focus {
+    background: $color-secondary--dark;
+    border: 1px solid $color-secondary--darker;
+    box-shadow: 0px 0px 0px 4px rgba(130, 138, 145, 0.8);
+  }
+
+  &:active {
+    background: $color-secondary--darker;
+    border: 1px solid $color-secondary--darker-border;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+
+    &:hover {
+      background: $color-secondary;
+      border: 1px solid $color-secondary;
+      color: #ffffff;
+    }
+
+    &:focus {
+      background: transparent;
+      border: 1px solid $color-secondary--darker;
+      box-shadow: 0px 0px 0px 4px rgba(130, 138, 145, 0.8);
+      color: $color-secondary--darker;
+    }
+
+    &:active {
+      background: $color-secondary--darker;
+      border: 1px solid $color-secondary--darker-border;
+      color: #ffffff;
+    }
+  }
+}
+
+.bs-btn-success {
+  background: $color-success;
+  border: 1px solid $color-success;
+  color: #ffffff;
+
+  &:hover {
+    background: $color-success--dark;
+    border: 1px solid $color-success--dark;
+  }
+
+  &:focus {
+    background: $color-success--dark;
+    border: 1px solid $color-success--darker;
+    box-shadow: 0px 0px 0px 4px rgba(60, 153, 110, 0.8);
+  }
+
+  &:active {
+    background: $color-success--darker;
+    border: 1px solid $color-success--darker-border;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-success;
+    color: $color-success;
+
+    &:hover {
+      background: $color-success;
+      border: 1px solid $color-success;
+      color: #ffffff;
+    }
+
+    &:focus {
+      background: transparent;
+      border: 1px solid $color-success--darker;
+      box-shadow: 0px 0px 0px 4px rgba(60, 153, 110, 0.8);
+      color: $color-success--darker;
+    }
+
+    &:active {
+      background: $color-success--darker;
+      border: 1px solid $color-success--darker-border;
+      color: #ffffff;
+    }
+  }
+}
+
+.bs-btn-danger {
+  background: $color-danger;
+  border: 1px solid $color-danger;
+  color: #ffffff;
+
+  &:hover {
+    background: $color-danger--dark;
+    border: 1px solid $color-danger--dark;
+  }
+
+  &:focus {
+    background: $color-danger--dark;
+    border: 1px solid $color-danger--darker;
+    box-shadow: 0px 0px 0px 4px rgba(225, 83, 97, 0.8);
+  }
+
+  &:active {
+    background: $color-danger--darker;
+    border: 1px solid $color-danger--darker-border;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $color-danger;
+    color: $color-danger;
+
+    :hover {
+      background: $color-danger;
+      border: 1px solid $color-danger;
+      color: #ffffff;
+    }
+
+    :focus {
+      background: transparent;
+      border: 1px solid $color-danger--darker;
+      box-shadow: 0px 0px 0px 4px rgba(225, 83, 97, 0.8);
+      color: $color-danger--darker;
+    }
+
+    :active {
+      background: $color-danger--darker;
+      border: 1px solid $color-danger--darker-border;
+      color: #ffffff;
+    }
+  }
+}
+
+/* Bootstrap style buttons end */
+
+$color-mat-default: #757575;
+$color-mat-primary: #3949ab;
+$color-mat-secondary: #5e35b1;
+$color-mat-secondary--hover: rgba(94, 53, 177, 0.8);
+$color-mat-success: #43a047;
+$color-mat-success--hover: rgba(67, 160, 71, 0.8);
+
+$color-mat-danger: #d81b60;
+$color-mat-danger--hover: rgba(216, 27, 96, 0.8);
+
+/* Material style buttons begin */
+.mat-btn {
+  padding: 8px 16px;
+  /* material-default-gray */
+  background: $color-mat-default;
+  /* material-default-gray */
+  border: 1px solid $color-mat-default;
+  box-sizing: border-box;
+  /* material-shadow */
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  /* button-material */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  outline: none;
+
+  &:hover {
+    background: rgba(117, 117, 117, 0.8);
+    border: 1px solid rgba(117, 117, 117, 0.8);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus {
+    background: rgba(117, 117, 117, 0.8);
+    border: 1px solid rgba(117, 117, 117, 0.8);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: rgba(117, 117, 117, 0.8);
+    border: 1px solid rgba(117, 117, 117, 0.8);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &--small {
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &--large {
+    padding: 9px 19px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.mat-btn-primary {
+  background: $color-mat-primary;
+  border: 1px solid $color-mat-primary;
+
+  &:hover {
+    /* material-primary-blue-hover */
+    background: rgba(57, 73, 171, 0.8);
+    border: 1px solid rgba(57, 73, 171, 0.8);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus {
+    background: $color-mat-primary;
+    border: 1px solid $color-mat-primary;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: rgba(57, 73, 171, 0.8);
+    border: 1px solid rgba(57, 73, 171, 0.8);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.mat-btn-secondary {
+  background: $color-mat-secondary;
+  border: 1px solid $color-mat-secondary;
+
+  &:hover {
+    background: $color-mat-secondary--hover;
+    /* material-purple-hover */
+    border: 1px solid $color-mat-secondary--hover;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus {
+    background: $color-mat-secondary;
+    border: 1px solid $color-mat-secondary;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: $color-mat-secondary--hover;
+    border: 1px solid $color-mat-secondary--hover;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.mat-btn-success {
+  background: $color-mat-success;
+  border: 1px solid $color-mat-success;
+
+  &:hover {
+    background: $color-mat-success--hover;
+    border: 1px solid $color-mat-success--hover;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus {
+    background: $color-mat-success--hover;
+    border: 1px solid $color-mat-success--hover;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: $color-mat-success--hover;
+    border: 1px solid $color-mat-success--hover;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.mat-btn-danger {
+  background: $color-mat-danger;
+  border: 1px solid $color-mat-danger;
+
+  &:hover {
+    background: $color-mat-danger--hover;
+    border: 1px solid$color-mat-danger--hover;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus {
+    background: $color-mat-danger--hover;
+    border: 1px solid$color-mat-danger--hover;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    background: $color-mat-danger--hover;
+    border: 1px solid$color-mat-danger--hover;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Material style buttons end */
+
+/* Block style buttons begin */
+.block-btn {
+  padding: 15px 135px;
+  background: $color-default;
+  border: 1px solid $color-default;
+  /* button-block */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  outline: none;
+
+  &--small {
+    padding: 10px 80px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &--large {
+    padding: 20px 155px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.block-btn-primary {
+  background: $color-primary;
+  color: #ffffff;
+  border-color: $color-primary;
+
+  &:hover {
+    /* primary-blue-hover */
+    background: $color-primary--dark;
+    /* primary-blue-hover */
+    border: 1px solid $color-primary--dark;
+  }
+
+  &:focus {
+    /* primary-blue-hover */
+    background: $color-primary--dark;
+    /* primary-blue-border-focus */
+    border: 1px solid $color-primary--darker;
+    box-shadow: 0px 0px 0px 4px rgba(49, 132, 253, 0.8);
+  }
+
+  &:active {
+    /*primary-blue-active*/
+    background: $color-primary--darker;
+    /* primary-blue-active-border */
+    border: 1px solid $color-primary--darker-border;
+  }
+}
+
+.block-btn-secondary {
+  /* secondary-gray */
+  background: $color-secondary;
+  color: #ffffff;
+  border-color: $color-secondary;
+
+  &:hover {
+    /* secondary-gray-hover */
+    background: $color-secondary;
+    /* secondary-gray-hover */
+    border: 1px solid $color-secondary;
+  }
+
+  &:focus {
+    /* secondary-gray-focus */
+    background: $color-secondary;
+    /* secondary-gray-border-focus */
+    border: 1px solid $color-secondary--darker;
+    box-shadow: 0px 0px 0px 4px rgba(130, 138, 145, 0.8);
+  }
+
+  &:active {
+    /* secondary-gray-active */
+    background: $color-secondary--darker;
+    /* secondary-gray-active-border */
+    border: 1px solid $color-secondary--darker-border;
+  }
+}
+
+.block-btn-success {
+  /* success-green */
+  background: $color-success;
+  color: #ffffff;
+  border-color: $color-success;
+
+  &:hover {
+    /* success-green-hover */
+    background: $color-success;
+    /* success-green-hover */
+    border: 1px solid $color-success;
+  }
+
+  &:focus {
+    /* success-green-focus */
+    background: $color-success;
+    /* success-green-border-focus */
+    border: 1px solid $color-success--darker;
+    box-shadow: 0px 0px 0px 4px rgba(60, 153, 110, 0.8);
+  }
+
+  &:active {
+    /* success-green-active */
+    background: $color-success--darker;
+    /* success-green-active-border */
+    border: 1px solid $color-success--darker-border;
+  }
+}
+
+.block-btn-danger {
+  background: $color-danger;
+  color: #ffffff;
+  border-color: $color-danger;
+
+  &:hover {
+    /* danger-red-hover */
+    background: $color-danger;
+    /* danger-red-hover */
+    border: 1px solid $color-danger;
+  }
+
+  &:focus {
+    /* danger-red-focus */
+    background: $color-danger;
+    /* danger-red-border-focus */
+    border: 1px solid $color-danger--darker;
+    box-shadow: 0px 0px 0px 4px rgba(225, 83, 97, 0.8);
+  }
+
+  &:active {
+    /* danger-red-active */
+    background: $color-danger--darker;
+    /* danger-red-active-border */
+    border: 1px solid $color-danger--darker-border;
+  }
+}
+/* Block style buttons end */
+
+/* Pill style buttons begin */
+.pill-btn {
+  padding: 6px 20px;
+  background: $color-default;
+  border: 1px solid $color-default;
+  border-radius: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color: #000000;
+  outline: none;
+
+  &-primary {
+    background: $color-primary;
+    border-color: $color-primary;
+    color: #ffffff;
+
+    &:hover {
+      /* primary-blue-hover */
+      background: $color-primary--dark;
+      /* primary-blue-hover */
+      border: 1px solid $color-primary--dark;
+    }
+
+    &:focus {
+      /* primary-blue-hover */
+      background: $color-primary--dark;
+      /* primary-blue-border-focus */
+      border: 1px solid $color-primary--darker;
+      box-shadow: 0px 0px 0px 4px rgba(49, 132, 253, 0.8);
+    }
+
+    &:active {
+      /*primary-blue-active*/
+      background: $color-primary--darker;
+      /* primary-blue-active-border */
+      border: 1px solid $color-primary--darker-border;
+    }
+  }
+
+  &-secondary {
+    background: $color-secondary;
+    border-color: $color-secondary;
+    color: #ffffff;
+
+    &:hover {
+      /* secondary-gray-hover */
+      background: $color-secondary--dark;
+      /* secondary-gray-hover */
+      border: 1px solid $color-secondary--dark;
+    }
+
+    &:focus {
+      /* secondary-gray-focus */
+      background: $color-secondary--dark;
+      /* secondary-gray-border-focus */
+      border: 1px solid $color-secondary--darker;
+      box-shadow: 0px 0px 0px 4px rgba(130, 138, 145, 0.8);
+    }
+
+    &:active {
+      /* secondary-gray-active */
+      background: $color-secondary--darker;
+      /* secondary-gray-active-border */
+      border: 1px solid $color-secondary--darker-border;
+    }
+  }
+
+  &-success {
+    background: $color-success;
+    border-color: $color-success;
+    color: #ffffff;
+
+    &:hover {
+      /* success-green-hover */
+      background: $color-success--dark;
+      /* success-green-hover */
+      border: 1px solid $color-success--dark;
+    }
+
+    &:focus {
+      /* success-green-focus */
+      background: $color-success--dark;
+      /* success-green-border-focus */
+      border: 1px solid $color-success--dark;
+      box-shadow: 0px 0px 0px 4px rgba(60, 153, 110, 0.8);
+    }
+
+    &:active {
+      /* success-green-active */
+      background: $color-success--darker;
+      /* success-green-active-border */
+      border: 1px solid $color-success--darker-border;
+    }
+  }
+
+  &-danger {
+    background: $color-danger;
+    border-color: $color-danger;
+    color: #ffffff;
+
+    &:hover {
+      /* danger-red-hover */
+      background: $color-danger--dark;
+      /* danger-red-hover */
+      border: 1px solid $color-danger--dark;
+    }
+
+    &:focus {
+      /* danger-red-focus */
+      background: $color-danger--dark;
+      /* danger-red-border-focus */
+      border: 1px solid $color-danger--darker;
+      box-shadow: 0px 0px 0px 4px rgba(225, 83, 97, 0.8);
+    }
+
+    &:active {
+      /* danger-red-active */
+      background: $color-danger--dark;
+      /* danger-red-active-border */
+      border: 1px solid $color-danger--darker-border;
+    }
+  }
+
+  &--small {
+    padding: 4px 18px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &--large {
+    padding: 8px 30px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+/* Pill style buttons end */
